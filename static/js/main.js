@@ -148,3 +148,4 @@ function processSwipe(touchStartX, touchEndX, touchStartY, touchEndY) {
         plusSlides(+1);
     }
 }
+
