@@ -14,6 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+window.addEventListener("popstate", function (e) {
+    window.location.reload();
+})
+
 const path = window.location.href
 
 let currentScroll = 0
@@ -61,8 +65,8 @@ function showSlides(n) {
         slides[i].style.display = "none";
     }
     slide = slides[slideIndex - 1];
-    if (history.replaceState) {
-        history.replaceState({}, path, slide.getAttribute("path"));
+    if (history.pushState) {
+        history.pushState({}, '', slide.getAttribute("path"));
     }
     if (slide.getAttribute("info") != "true") {
         document.getElementById('arrow').style.display = "none";
