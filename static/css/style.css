@@ -338,6 +338,7 @@ section .column img {
     margin-top: 20px;
     overflow: hidden;
     border: 0px;
+    position: relative;
 }
 
 .image-box img {
@@ -349,6 +350,17 @@ section .column img {
 
 .image-box:hover img {
     transform: scale(1.03);
+}
+
+.stack-icon {
+	position: absolute;
+	right: 0.5em;
+	bottom: 0.5em;
+	background-color: black;
+	opacity: 80%;
+	border-radius: 0.2em;
+	padding: 0.2em;
+	z-index: 1;
 }
 
 .slide-imgs .columns {

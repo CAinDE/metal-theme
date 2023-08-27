@@ -39,6 +39,8 @@
                     {{ $img = $img.Resize $resizer }}
                     <div class="center">
                         <div class="image-box {{ if eq ($.scratch.Get "columnsCount") 1 }} alittle {{ end }}">
+                            {{ $stack := ((index $row "post").Params.images | len) }}
+                            {{ if gt $stack 1 }}<div class="stack-icon"><span class="fa-solid fa-layer-group"></span></div>{{ end }}
                             <img
                             src="{{ $img.RelPermalink }}"
                             loading="lazy"
